@@ -41,15 +41,15 @@ and career exploration tools in one place so students can move from questions to
 </header>
 </div>
 
-<main id="main">
+<main id="main" tabindex="-1">
 
 <section class="hero-panel">
 <div class="section-heading">
 <h2>Your central hub for career success</h2>
 <p class="page-lead">
 Use this site to find trusted resources, prepare for internships and job searches, and stay focused
-on the next action that matters most. The goal is to make career support easy to scan, easier to
-use on any device, and more approachable for first-time visitors.
+on the next action that matters most. The site now shifts more dramatically at larger breakpoints so
+tablet and desktop users get a more spacious, dashboard-style layout instead of a stretched mobile view.
 </p>
 <a class="button-link" href="resume.html">Start with Resume Support</a>
 <a class="button-link secondary" href="career_exploration.html">Explore Career Paths</a>
@@ -120,27 +120,39 @@ internships, interviews, and long-term career decisions.
 
 <section>
 <div class="section-heading">
-<h2>Most-used resources</h2>
-<p>These links can help students take immediate action after they visit the site for the first time.</p>
+<h2>Resource finder</h2>
+<p>
+This interactive filter is the site's challenging element. It helps visitors narrow resources by goal
+without leaving the page, and it stays keyboard accessible through real buttons and status updates.
+</p>
 </div>
 
+<div class="filter-bar" aria-label="Filter resources by topic">
+<button class="filter-button" type="button" data-filter="all" aria-pressed="true">All Resources</button>
+<button class="filter-button secondary" type="button" data-filter="resume" aria-pressed="false">Resume</button>
+<button class="filter-button secondary" type="button" data-filter="networking" aria-pressed="false">Networking</button>
+<button class="filter-button secondary" type="button" data-filter="exploration" aria-pressed="false">Exploration</button>
+</div>
+
+<p class="resource-status" data-filter-status aria-live="polite">Showing all resources.</p>
+
 <div class="resource-grid">
-<article class="resource-card">
+<article class="resource-card" data-category="resume">
 <h3>UMSI Resume Guide</h3>
 <p>Use sample formatting, action-oriented bullet advice, and review criteria to improve your resume.</p>
 <a href="https://docs.google.com/document/d/1_1GfDJyVGIgE82MZjVhuWT_aB_2Hcj1NN62FUCXoR_o/edit" target="_blank" rel="noopener">Open the resume guide</a>
 </article>
 
-<article class="resource-card">
-<h3>Attend a Career Event</h3>
-<p>Find workshops and employer events that can build confidence and create new opportunities.</p>
-<a href="https://umich.instructure.com/courses/137916/pages/attend-an-event" target="_blank" rel="noopener">View event options</a>
-</article>
-
-<article class="resource-card">
+<article class="resource-card" data-category="networking">
 <h3>Networking Tips</h3>
 <p>Review conversation starters, outreach advice, and follow-up practices before reaching out.</p>
 <a href="https://docs.google.com/document/d/18HMt79BU8ovGf9z7_P7No5tuwUS6qHNW5u0sgrepLtE/edit" target="_blank" rel="noopener">Read networking tips</a>
+</article>
+
+<article class="resource-card" data-category="exploration">
+<h3>Attend a Career Event</h3>
+<p>Find workshops and employer events that can build confidence and expose you to new paths.</p>
+<a href="https://umich.instructure.com/courses/137916/pages/attend-an-event" target="_blank" rel="noopener">View event options</a>
 </article>
 </div>
 </section>
@@ -150,7 +162,7 @@ internships, interviews, and long-term career decisions.
 <footer class="site-footer">
 <div class="footer-inner">
 <p>
-University of Michigan School of Information |
+&copy; <span class="current-year"></span> University of Michigan School of Information |
 <a href="https://umich.instructure.com/courses/137916" target="_blank" rel="noopener">
 UMSI Career Development Office
 </a>
@@ -158,5 +170,6 @@ UMSI Career Development Office
 </div>
 </footer>
 
+<script src="js/script.js"></script>
 </body>
 </html>
