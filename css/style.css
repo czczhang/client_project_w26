@@ -395,8 +395,11 @@ ol {
 }
 
 .quote-card {
-    border-left: 6px solid var(--maize);
     background-color: #fffef7;
+    border: 1px solid rgba(0, 39, 76, 0.1);
+    border-left: 6px solid var(--maize);
+    border-radius: var(--radius-md);
+    padding: 1.2rem;
 }
 
 .error-shell {
